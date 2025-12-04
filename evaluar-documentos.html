@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <title>Evaluar Documentos - BPO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="docs">
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">BPO System</div>
+    <nav>
+      <a href="proyectos.html">Solicitudes recibidas</a>
+      <a href="proyectos.html">Proyectos activos</a>
+      <a href="subir-documentos.html">Carga de informes</a>
+      <a href="evaluar-documentos.html">Evaluación de documentos</a>
+      <a href="chat.html">Chat con clientes</a>
+      <a href="#" onclick="logout()">Cerrar sesión</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="header-row">
+      <div>
+        <h1 style="margin:0">Evaluación de documentos</h1>
+        <div style="color:var(--muted)">Revisa los documentos que han subido los clientes y marca su estado.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Documentos recibidos</h3>
+      <div id="docsList"></div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
