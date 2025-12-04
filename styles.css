@@ -1,0 +1,112 @@
+/* ============================
+   ESTILO GENERAL
+============================ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6;
+    color: #1E3A8A;
+}
+
+h1, h2, h3 {
+    color: #1E3A8A;
+    margin-bottom: 10px;
+}
+
+/* ============================
+   BOTONES
+============================ */
+.btn {
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color: #2563EB;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1E3A8A;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #2563EB;
+    border: 2px solid #2563EB;
+}
+
+.btn-secondary:hover {
+    background-color: #DCEAFF;
+}
+
+/* ============================
+   TARJETAS
+============================ */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px #00000015;
+    margin: 15px;
+}
+
+/* ============================
+   FORMULARIOS
+============================ */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid #DCEAFF;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563EB;
+}
+
+/* ============================
+   MENÚ LATERAL
+============================ */
+.sidebar {
+    width: 250px;
+    background-color: #1E3A8A;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #2563EB;
+}
+
+/* ============================
+   CONTENIDO PRINCIPAL
+============================ */
+.main {
+    margin-left: 260px;
+    padding: 25px;
+}
