@@ -8,25 +8,30 @@
   <script src="script.js" defer></script>
 </head>
 <body data-page="chat">
-
-<div class="container">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-    <h2>Chat de comunicación</h2>
-    <div><a href="dashboard-cliente.html"><button class="btn">Volver</button></a></div>
+<div class="container" style="display:grid;grid-template-columns:280px 1fr;gap:16px">
+  <div>
+    <h3>Salas / Clientes</h3>
+    <div id="chatRooms"></div>
   </div>
 
-  <div class="card">
-    <div id="chatBox" class="chat-box"></div>
+  <div>
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2 id="chatRoomHeader">Chat</h2>
+        <div><a href="dashboard-cliente.html"><button class="btn">Volver</button></a></div>
+      </div>
 
-    <div class="chat-input">
-      <textarea id="chatInput" placeholder="Escribe un mensaje..."></textarea>
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <button class="btn btn-primary" onclick="sendChatFromPage()">Enviar</button>
-        <button class="btn" onclick="alert('Enviar archivo simulado')">Adjuntar</button>
+      <div id="chatBox" class="chat-box" style="margin-top:12px;"></div>
+
+      <div class="chat-input" style="margin-top:12px">
+        <textarea id="chatInput" placeholder="Escribe un mensaje..."></textarea>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <button id="chatSendBtn" class="btn btn-primary">Enviar</button>
+          <button class="btn" onclick="alert('Adjuntar archivo simulado')">Adjuntar</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 </body>
-</html>
+
