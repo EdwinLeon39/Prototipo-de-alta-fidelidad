@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Búsqueda</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"/>
+  <title>Buscar BPO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+<body data-page="buscar">
 
-<body>
-
-<div class="main">
-    <h1>Buscar Empresa BPO</h1>
-
-    <input type="text" placeholder="Buscar por nombre o sector...">
-
-    <div class="card">
-        <h3>GlobalBPO Solutions</h3>
-        <p>Sector: Servicios empresariales</p>
-        <button class="btn btn-primary">Iniciar proyecto</button>
+<div class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <h2>Buscar BPO / Clientes</h2>
+    <div>
+      <a href="dashboard-cliente.html"><button class="btn">Volver</button></a>
     </div>
+  </div>
+
+  <div class="card">
+    <input type="text" id="searchInput" placeholder="Buscar por nombre o sector..." style="padding:12px;border-radius:10px;border:1px solid #e6eefc;width:100%">
+  </div>
+
+  <div id="results" style="margin-top:18px"></div>
 </div>
 
 </body>
 </html>
+
