@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+  <meta charset="utf-8"/>
+  <title>Login - BPO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="login">
 
-<div class="main">
-    <h2>Iniciar Sesión</h2>
+<div class="container card" style="max-width:720px;margin-top:40px">
+  <div style="display:flex;gap:24px;align-items:stretch">
+    <div style="flex:1;padding:20px">
+      <h2 style="margin-top:0">Iniciar sesión</h2>
+      <form onsubmit="event.preventDefault(); if(getRole()) { window.location.href = (getRole()==='cliente' ? 'dashboard-cliente.html' : 'dashboard-bpo.html'); } else alert('Selecciona tu rol');">
+        <div class="form">
+          <div class="full">
+            <label>Email</label>
+            <input type="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="full">
+            <label>Contraseña</label>
+            <input type="password" placeholder="••••••" required>
+          </div>
+        </div>
 
-    <label>Correo</label>
-    <input type="email">
+        <div style="margin-top:12px">
+          <label style="display:block;margin-bottom:8px;color:var(--muted)">Selecciona tu rol</label>
+          <div style="display:flex;gap:10px">
+            <button type="button" class="btn btn-ghost role-btn" data-role="cliente" onclick="setRole('cliente')" style="width:120px">Cliente</button>
+            <button type="button" class="btn btn-ghost role-btn" data-role="bpo" onclick="setRole('bpo')" style="width:120px">BPO</button>
+          </div>
+        </div>
 
-    <label>Contraseña</label>
-    <input type="password">
+        <div style="margin-top:20px;display:flex;gap:10px">
+          <button class="btn btn-primary" type="submit">Ingresar</button>
+          <a href="index.html"><button type="button" class="btn">Volver</button></a>
+        </div>
+      </form>
 
-    <h3>Selecciona tu rol:</h3>
-    <button class="btn btn-secondary" onclick="selectRole('cliente')">Cliente</button>
-    <button class="btn btn-secondary" onclick="selectRole('bpo')">BPO</button>
+      <div style="margin-top:14px;color:var(--muted);font-size:13px">
+        ¿Olvidaste tu contraseña? <a href="#" style="color:var(--primary)">Recuperar</a>
+      </div>
+    </div>
 
-    <br><br>
-    <button class="btn btn-primary" onclick="loginUser()">Ingresar</button>
+    <div style="width:320px;background:var(--light);padding:18px;border-radius:12px">
+      <h4 style="margin-top:0">Registro rápido</h4>
+      <p style="color:var(--muted)">Aquí puedes registrarte como Cliente o como organización BPO (formulario simulado).</p>
+      <a href="index.html"><button class="btn btn-primary" style="width:100%">Crear cuenta</button></a>
+    </div>
+
+  </div>
 </div>
 
 </body>
 </html>
+
