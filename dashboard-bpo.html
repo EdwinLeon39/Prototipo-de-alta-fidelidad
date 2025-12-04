@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <title>Panel BPO</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="dash-bpo">
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">BPO System</div>
+    <nav>
+      <a href="proyectos.html">Solicitudes recibidas</a>
+      <a href="proyectos.html">Proyectos activos</a>
+      <a href="subir-documentos.html">Carga de informes</a>
+      <a href="proyectos.html">Evaluación de documentos</a>
+      <a href="chat.html">Chat con clientes</a>
+      <a href="#" onclick="logout()">Cerrar sesión</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="header-row">
+      <div class="hgroup">
+        <h1 style="margin:0">Panel del BPO</h1>
+        <div style="color:var(--muted);font-size:13px">Panel de trabajo para organizaciones</div>
+      </div>
+      <div class="hgroup">
+        <div class="user">BPO</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
+      <div class="card">
+        <h3>Solicitudes recibidas</h3>
+        <div style="font-size:28px;font-weight:700" id="projCountB">0</div>
+        <div style="color:var(--muted);margin-top:8px">Solicitudes por atender</div>
+      </div>
+
+      <div class="card">
+        <h3>Documentos por revisar</h3>
+        <div style="font-size:28px;font-weight:700" id="docCountB">0</div>
+        <div style="color:var(--muted);margin-top:8px">Documentos pendientes</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px" class="card">
+      <h3>Acciones rápidas</h3>
+      <div style="display:flex;gap:12px;margin-top:12px">
+        <a href="proyectos.html"><button class="btn btn-primary">Ver solicitudes</button></a>
+        <a href="subir-documentos.html"><button class="btn">Subir informe</button></a>
+        <a href="chat.html"><button class="btn btn-ghost">Abrir chat</button></a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

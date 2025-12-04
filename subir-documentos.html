@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <title>Subir documento</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="docs">
+
+<div class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <h2>Subir documento</h2>
+    <div><a href="dashboard-cliente.html"><button class="btn">Volver</button></a></div>
+  </div>
+
+  <div class="card">
+    <form onsubmit="handleUploadForm(event)">
+      <label>Seleccionar archivo</label>
+      <input id="fileInput" type="file" accept=".pdf,.doc,.docx,.zip" required class="full">
+      <label style="margin-top:10px">Descripción</label>
+      <textarea id="fileDesc" placeholder="Breve descripción" class="full"></textarea>
+
+      <div style="margin-top:12px">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h3>Documentos cargados</h3>
+    <div id="docsList"></div>
+  </div>
+</div>
+
+</body>
+</html>
