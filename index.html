@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>BPO Management System</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <title>BPO Management System - Inicio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="main">
-    <h1>BPO Management System</h1>
-    <p>Conecta clientes y organizaciones BPO de manera segura y eficiente.</p>
+<div class="container card" style="max-width:900px;margin:40px auto">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <div>
+      <h1 style="margin:0">BPO Management System</h1>
+      <p style="margin:6px 0 0;color:var(--muted)">Conecta clientes y organizaciones BPO de forma segura y eficiente — versión prototipo.</p>
+    </div>
+    <div>
+      <a href="login.html"><button class="btn btn-primary">Iniciar sesión / Registrarme</button></a>
+    </div>
+  </div>
 
-    <a href="login.html"><button class="btn btn-primary">Iniciar Sesión</button></a>
-    <a href="login.html"><button class="btn btn-secondary">Registrarme</button></a>
+  <div style="display:flex;gap:20px;margin-top:24px;align-items:center">
+    <div style="flex:1" class="card">
+      <h3>¿Qué hace el sistema?</h3>
+      <ul style="color:var(--muted)">
+        <li>Autenticación por roles: Cliente y BPO</li>
+        <li>Subida y gestión de documentos</li>
+        <li>Creación y seguimiento de proyectos</li>
+        <li>Búsqueda de contrapartes y mensajería interna</li>
+      </ul>
+      <p style="color:var(--muted);font-size:13px">Este prototipo es una maqueta frontend que muestra la usabilidad y los flujos requeridos por la guía de la UNAD.</p>
+    </div>
+
+    <div style="width:320px" class="card">
+      <h4 style="margin-top:0">Resumen rápido</h4>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between">
+          <div style="color:var(--muted)">Pantallas</div>
+          <div><strong>12</strong></div>
+        </div>
+        <div style="display:flex;justify-content:space-between">
+          <div style="color:var(--muted)">Roles</div>
+          <div><strong>Cliente / BPO</strong></div>
+        </div>
+        <div style="display:flex;justify-content:space-between">
+          <div style="color:var(--muted)">Archivos</div>
+          <div><strong>Simulados</strong></div>
+        </div>
+      </div>
+      <div style="margin-top:14px;text-align:center">
+        <a href="login.html"><button class="btn btn-ghost">Ir a Iniciar sesión</button></a>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
 </html>
+
+
