@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Chat</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+  <meta charset="utf-8"/>
+  <title>Mensajería</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+<body data-page="chat">
 
-<body>
+<div class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <h2>Chat de comunicación</h2>
+    <div><a href="dashboard-cliente.html"><button class="btn">Volver</button></a></div>
+  </div>
 
-<div class="main">
-    <h1>Chat de comunicación</h1>
+  <div class="card">
+    <div id="chatBox" class="chat-box"></div>
 
-    <div id="chatBox"></div>
-
-    <textarea id="messageInput" placeholder="Escribe un mensaje..."></textarea>
-    <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+    <div class="chat-input">
+      <textarea id="chatInput" placeholder="Escribe un mensaje..."></textarea>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <button class="btn btn-primary" onclick="sendChatFromPage()">Enviar</button>
+        <button class="btn" onclick="alert('Enviar archivo simulado')">Adjuntar</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
 </html>
+
