@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Panel Cliente</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"/>
+  <title>Panel Cliente</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+<body data-page="dash-client">
 
-<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">BPO System</div>
+    <nav>
+      <a href="subir-documentos.html">Subir documentos</a>
+      <a href="proyectos.html">Mis proyectos</a>
+      <a href="buscar.html">Buscar BPO</a>
+      <a href="chat.html">Mensajes</a>
+      <a href="#" onclick="logout()">Cerrar sesión</a>
+    </nav>
+  </aside>
 
-<div class="sidebar">
-    <h2>Cliente</h2>
-    <a href="subir-documentos.html">Subir documentos</a>
-    <a href="proyectos.html">Mis proyectos</a>
-    <a href="buscar.html">Buscar BPO</a>
-    <a href="chat.html">Mensajes</a>
-    <a href="index.html">Cerrar sesión</a>
-</div>
+  <main class="main">
+    <div class="header-row">
+      <div class="hgroup">
+        <h1 style="margin:0">Panel del Cliente</h1>
+        <div style="color:var(--muted);font-size:13px">Bienvenido — tu prototipo</div>
+      </div>
+      <div class="hgroup">
+        <div class="user">Cliente</div>
+      </div>
+    </div>
 
-<div class="main">
-    <h1>Panel del Cliente</h1>
-
-    <div class="card">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
+      <div class="card">
         <h3>Documentos enviados</h3>
-        <p>No hay documentos aún.</p>
+        <div style="font-size:32px;font-weight:800" id="docCount">0</div>
+        <div style="color:var(--muted);margin-top:8px">Documentos cargados en el sistema (simulado)</div>
+      </div>
+
+      <div class="card">
+        <h3>Estado de proyectos</h3>
+        <div style="font-size:32px;font-weight:800" id="projCount">0</div>
+        <div style="color:var(--muted);margin-top:8px">Proyectos vinculados</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px" class="card">
+      <h3 style="margin-top:0">Accesos rápidos</h3>
+      <div style="display:flex;gap:12px;margin-top:12px">
+        <a href="buscar.html"><button class="btn btn-primary">Buscar BPO</button></a>
+        <a href="subir-documentos.html"><button class="btn">Subir documento</button></a>
+        <a href="proyectos.html"><button class="btn btn-ghost">Ver proyectos</button></a>
+      </div>
     </div>
 
     <div class="card">
-        <h3>Estado de proyectos</h3>
-        <p>No tienes proyectos activos.</p>
+      <h3>Notificaciones (simulado)</h3>
+      <div style="color:var(--muted)">No hay notificaciones nuevas.</div>
     </div>
+
+  </main>
 </div>
 
 </body>
 </html>
+
+
+</body>
+</html>
+
